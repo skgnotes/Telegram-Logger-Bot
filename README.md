@@ -1,6 +1,6 @@
 # Telegram Logger Bot
 
-The bot logs all data given to it into a Google Spreadsheet. The spreadsheet can be accessed by asking the bot for 'link'. 
+A telegram bot built with Google App Scripts that logs all data given to it into a Google Spreadsheet. The log spreadsheet can be accessed by asking the bot for 'link'. 
 
 ## Bot in action
 
