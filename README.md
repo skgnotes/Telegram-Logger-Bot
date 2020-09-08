@@ -39,7 +39,7 @@ The bot logs all data given to it into a Google Spreadsheet. The spreadsheet can
 
 ## Related
 
-[Original Blog](https://notes.sijokuruvilla.in/telegram-logger-bot)
-[Blog: Fetch link to logger spreadsheet from Telegram bot](https://notes.sijokuruvilla.in/fetch-link-to-logger-spreadsheet-from-telegram-bot)
-[Blog: Locating ID of a Telegram group](https://notes.sijokuruvilla.in/locating-id-of-a-telegram-group)
-[Blog: Deleting webhook](https://notes.sijokuruvilla.in/deleting-webhook)
+* [Original Blog](https://notes.sijokuruvilla.in/telegram-logger-bot)
+* [Blog: Fetch link to logger spreadsheet from Telegram bot](https://notes.sijokuruvilla.in/fetch-link-to-logger-spreadsheet-from-telegram-bot)
+* [Blog: Locating ID of a Telegram group](https://notes.sijokuruvilla.in/locating-id-of-a-telegram-group)
+* [Blog: Deleting webhook](https://notes.sijokuruvilla.in/deleting-webhook)
