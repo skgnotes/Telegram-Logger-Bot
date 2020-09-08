@@ -10,12 +10,16 @@ function doPost (e){
   var contents = JSON.parse(e.postData.contents);
   var text = contents.message.text;
   var id = contents.message.from.id;
-  var name = contents.message.from.first_name + " " + contents.message.from.last_name;
-  var first_name = contents.message.from.first_name;var ss = SpreadsheetApp.openById(ssID);
-  ss.getSheetByName('Sheet1').appendRow([new Date(),id, first_name,text]);
   
-  sendText(id, "Added to sheet");
-
+  if (text === "link")
+    sendText(id, 'https://docs.google.com/spreadsheets/d/1p5A1jNwMkibZA/edit#gid=0');
+  else{   
+    var name = contents.message.from.first_name + " " + contents.message.from.last_name;
+    var first_name = contents.message.from.first_name;
+    var ss = SpreadsheetApp.openById(ssID);
+    ss.getSheetByName('Sheet1').appendRow([new Date(),id, first_name,text]);
+    sendText(id, "Added to sheet");
+  }
 }
 
 function sendText(id, text) {
@@ -26,5 +30,11 @@ function sendText(id, text) {
 // run this function one time for setting web hook
 function setWebhook() {
   var response = UrlFetchApp.fetch(url + "/setWebhook?url=" + webAppUrl);
+  Logger.log(response.getContentText()); 
+}
+
+// run this function if you want to use the getUpdates method
+function deleteWebhook() {
+  var response = UrlFetchApp.fetch(url + "/deleteWebhook?url=" + webAppUrl);
   Logger.log(response.getContentText()); 
 }
